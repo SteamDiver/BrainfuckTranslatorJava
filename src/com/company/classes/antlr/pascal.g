@@ -156,12 +156,12 @@ import org.antlr.runtime.NoViableAltException;
         currentFileName = f; // set this File as the currentFileName
 
         // Create a scanner that reads from the input stream passed to us
-         com.company.classes.pascalLexer lexer = new com.company.classes.pascalLexer(s);
+         com.company.classes.com.company.classes.pascalLexer lexer = new com.company.classes.com.company.classes.pascalLexer(s);
 
         //System.out.println(parser.getAST().toStringList());
              TokenStream tokenStream = new CommonTokenStream(lexer);
             // Create a parser that reads from the scanner
-             com.company.classes.pascalParser parser = new com.company.classes.pascalParser(tokenStream);
+             com.company.classes.com.company.classes.com.company.classes.pascalParser parser = new com.company.classes.com.company.classes.com.company.classes.pascalParser(tokenStream);
 
             // set AST type to PascalAST (has symbol)
           //  parser.setASTNodeClass("PascalAST");
@@ -899,7 +899,7 @@ COMMENT_2
 // if it's a literal or really an identifer
 IDENT
 	//options {testLiterals=true;}
-	:	('a'..'z') ('a'..'z'|'0'..'9'|'_')*   //pspsps
+	:	('a'..'z'|'A'..'Z') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*   //pspsps
 	;
 
 // string literals

@@ -1,4 +1,4 @@
-package com.company.classes;// $ANTLR 3.5.2 .\\antlr\\pascal.g 2019-10-21 17:16:19
+package com.company.classes;// $ANTLR 3.5.2 .\\antlr\\pascal.g 2019-10-21 21:01:56
 
 import java.io.*;
 
@@ -221,12 +221,12 @@ public class pascalParser extends Parser {
 	        currentFileName = f; // set this File as the currentFileName
 
 	        // Create a scanner that reads from the input stream passed to us
-	         pascalLexer lexer = new pascalLexer(s);
+	         com.company.classes.pascalLexer lexer = new com.company.classes.pascalLexer(s);
 
 	        //System.out.println(parser.getAST().toStringList());
 	             TokenStream tokenStream = new CommonTokenStream(lexer);
 	            // Create a parser that reads from the scanner
-	             pascalParser parser = new pascalParser(tokenStream);
+	             com.company.classes.pascalParser parser = new com.company.classes.pascalParser(tokenStream);
 
 	            // set AST type to CommonTree (has symbol)
 	          //  parser.setASTNodeClass("CommonTree");

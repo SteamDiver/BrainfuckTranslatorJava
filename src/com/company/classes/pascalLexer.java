@@ -1,4 +1,4 @@
-package com.company.classes;// $ANTLR 3.5.2 .\\antlr\\pascal.g 2019-10-21 17:16:20
+package com.company.classes;// $ANTLR 3.5.2 .\\antlr\\pascal.g 2019-10-21 20:50:58
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -1922,10 +1922,10 @@ public class pascalLexer extends Lexer {
 		try {
 			int _type = IDENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\antlr\\pascal.g:902:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )* )
-			// .\\antlr\\pascal.g:902:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )*
+			// .\\antlr\\pascal.g:902:2: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// .\\antlr\\pascal.g:902:4: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
 			}
 			else {
@@ -1933,12 +1933,12 @@ public class pascalLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// .\\antlr\\pascal.g:902:15: ( 'a' .. 'z' | '0' .. '9' | '_' )*
+			// .\\antlr\\pascal.g:902:24: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop5:
 			while (true) {
 				int alt5=2;
 				int LA5_0 = input.LA(1);
-				if ( ((LA5_0 >= '0' && LA5_0 <= '9')||LA5_0=='_'||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
+				if ( ((LA5_0 >= '0' && LA5_0 <= '9')||(LA5_0 >= 'A' && LA5_0 <= 'Z')||LA5_0=='_'||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
 					alt5=1;
 				}
 
@@ -1946,7 +1946,7 @@ public class pascalLexer extends Lexer {
 				case 1 :
 					// .\\antlr\\pascal.g:
 					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -2884,10 +2884,10 @@ public class pascalLexer extends Lexer {
 		"\45\uffff\1\0\u00d8\uffff}>";
 	static final String[] DFA14_transitionS = {
 			"\2\47\1\uffff\2\47\22\uffff\1\47\6\uffff\1\51\1\36\1\37\1\26\1\24\1\31"+
-			"\1\25\1\42\1\27\12\52\1\30\1\32\1\34\1\33\1\35\1\uffff\1\44\32\uffff"+
-			"\1\40\1\uffff\1\41\1\43\2\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\50\1\10"+
-			"\2\50\1\11\1\12\1\13\1\14\1\15\1\50\1\16\1\17\1\20\1\21\1\22\1\23\3\50"+
-			"\1\45\1\uffff\1\46",
+			"\1\25\1\42\1\27\12\52\1\30\1\32\1\34\1\33\1\35\1\uffff\1\44\32\50\1\40"+
+			"\1\uffff\1\41\1\43\2\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\50\1\10\2\50"+
+			"\1\11\1\12\1\13\1\14\1\15\1\50\1\16\1\17\1\20\1\21\1\22\1\23\3\50\1\45"+
+			"\1\uffff\1\46",
 			"\1\53\3\uffff\1\54",
 			"\1\55\11\uffff\1\56",
 			"\1\57\6\uffff\1\60\6\uffff\1\61",
@@ -2938,29 +2938,29 @@ public class pascalLexer extends Lexer {
 			"\1\144\20\uffff\1\145",
 			"\1\146",
 			"\1\147",
-			"\12\50\45\uffff\1\50\1\uffff\26\50\1\150\3\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\26\50\1\150\3\50",
 			"\1\152",
 			"\1\153",
 			"\1\154",
 			"\1\155",
 			"\1\156",
 			"\1\157",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\23\50\1\161\6\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\23\50\1\161\6\50",
 			"\1\163",
 			"\1\164",
 			"\1\165",
 			"\1\166",
 			"\1\167",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\172",
 			"\1\173",
 			"\1\174\1\uffff\1\175\14\uffff\1\176",
 			"\1\177",
 			"\1\u0080",
 			"\1\u0081",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u0083",
 			"\1\u0085\12\uffff\1\u0084",
 			"\1\u0086",
@@ -2982,21 +2982,21 @@ public class pascalLexer extends Lexer {
 			"",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u008b",
 			"\1\u008c",
 			"\1\u008d",
 			"\1\u008e",
 			"\1\u008f",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u0091",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u0093",
 			"",
 			"\1\u0094",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u0096",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u0098",
 			"\1\u0099",
 			"",
@@ -3004,9 +3004,9 @@ public class pascalLexer extends Lexer {
 			"",
 			"\1\u009b",
 			"\1\u009c",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"",
 			"\1\u00a0",
@@ -3014,7 +3014,7 @@ public class pascalLexer extends Lexer {
 			"\1\u00a3",
 			"\1\u00a4",
 			"\1\u00a5",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00a7",
 			"\1\u00a8",
 			"",
@@ -3022,25 +3022,25 @@ public class pascalLexer extends Lexer {
 			"\1\u00aa",
 			"\1\u00ab",
 			"\1\u00ac",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00ae",
 			"\1\u00af",
 			"",
 			"\1\u00b0",
 			"\1\u00b1",
 			"\1\u00b2",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00b5",
 			"",
 			"\1\u00b6",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00b9",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00bb\12\uffff\1\u00bc",
 			"\1\u00bd",
 			"\1\u00be",
@@ -3050,25 +3050,25 @@ public class pascalLexer extends Lexer {
 			"\1\u00bf",
 			"\1\u00c0",
 			"\1\u00c1",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00c3",
 			"\1\u00c4",
 			"",
 			"\1\u00c5",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00c8",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00cb",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00cf",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00d1",
 			"",
 			"",
@@ -3077,7 +3077,7 @@ public class pascalLexer extends Lexer {
 			"\1\u00d3",
 			"\1\u00d4",
 			"\1\u00d5",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00d7",
 			"\1\u00d8",
 			"\1\u00d9",
@@ -3087,59 +3087,59 @@ public class pascalLexer extends Lexer {
 			"\1\u00dc",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"",
 			"",
 			"\1\u00df",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00e1",
 			"\1\u00e2",
 			"\1\u00e3",
 			"\1\u00e4",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00e6",
 			"\1\u00e7",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00ec",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00ee",
 			"\1\u00ef",
 			"",
 			"\1\u00f0",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00f3",
 			"\1\u00f4",
 			"\1\u00f5",
 			"",
 			"",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"\1\u00f7",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			"",
 			"\1\u00f9",
 			"",
 			"\1\u00fa",
 			"\1\u00fb",
 			"\1\u00fc",
-			"\12\50\45\uffff\1\50\1\uffff\32\50",
+			"\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
 			""
 	};
 
